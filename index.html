@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Contract Analyzer</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home"><i class="fas fa-balance-scale"></i> LegalAnalyzer</a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="contact.html">Customer Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Legal Contract Analyzer</h1>
+            <p>Streamline your contract review process with advanced analysis, risk detection, and clause summarization.</p>
+            <a href="#upload" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload-section">
+        <h2>Upload Your Contract</h2>
+        <input type="file" id="contractUpload" accept=".pdf, .docx, .txt" />
+        <button onclick="analyzeContract()">Analyze Contract</button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>Contact us for more information: <a href="mailto:info@legalanalyzer.com"><i class="fas fa-envelope"></i> info@legalanalyzer.com</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
