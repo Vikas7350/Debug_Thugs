@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-balance-scale"></i> LegalAnalyzer</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Customer Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="results" class="results-section">
+        <h2>Analysis Results</h2>
+        <div id="summary" class="summary">
+            <h3>Summary</h3>
+            <p id="contractSummary">Your contract has been analyzed. Here are the key points:</p>
+        </div>
+        <div id="risks" class="risks">
+            <h3>Detected Risks</h3>
+            <ul id="riskList"></ul>
+        </div>
+        <a href="index.html" class="cta-button">Analyze Another Contract</a>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>Contact us: <a href="mailto:info@legalanalyzer.com"><i class="fas fa-envelope"></i> info@legalanalyzer.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve and display analysis results
+        document.addEventListener("DOMContentLoaded", function () {
+            const summaryText = localStorage.getItem("contractSummary") || "No analysis available.";
+            const risks = JSON.parse(localStorage.getItem("riskList")) || [];
+
+            document.getElementById("contractSummary").innerText = summaryText;
+            const riskList = document.getElementById("riskList");
+
+            risks.forEach(risk => {
+                const li = document.createElement("li");
+                li.innerText = risk;
+                riskList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
